@@ -1,0 +1,9 @@
+# Project Challenger — Web GUI extra dependencies
+# Install in addition to requirements.txt:
+#   pip install -r requirements_web.txt
+#
+# Or install everything at once:
+#   pip install -r requirements.txt -r requirements_web.txt
+
+fastapi>=0.110
+uvicorn>=0.27

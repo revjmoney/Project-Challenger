@@ -1,0 +1,27 @@
+# Force LF line endings for shell scripts on all platforms
+# so they work on Linux/macOS after a Windows checkout/clone.
+*.sh    text eol=lf
+*.bash  text eol=lf
+
+# Windows batch files stay CRLF
+*.bat   text eol=crlf
+
+# Python source always LF
+*.py    text eol=lf
+
+# Other text files
+*.md    text eol=lf
+*.txt   text eol=lf
+*.json  text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.html  text eol=lf
+*.css   text eol=lf
+*.js    text eol=lf
+
+# Binary — never mangle
+*.pkl   binary
+*.pt    binary
+*.db    binary
+*.png   binary
+*.jpg   binary

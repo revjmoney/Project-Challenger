@@ -1,0 +1,40 @@
+# Project Challenger — Python dependencies
+#
+# PyTorch is NOT listed here.
+# It is installed separately by setup.bat / setup.sh so the correct
+# build variant (CUDA 12.1, CUDA 11.8, or CPU-only) can be chosen.
+# If you skip the installer and pip-install manually, run one of:
+#
+#   CUDA 12.1 (most modern NVIDIA GPUs, driver >= 525):
+#     pip install torch>=2.2 --index-url https://download.pytorch.org/whl/cu121
+#
+#   CUDA 11.8 (older GPUs / drivers):
+#     pip install torch>=2.2 --index-url https://download.pytorch.org/whl/cu118
+#
+#   CPU-only (no GPU, or non-NVIDIA):
+#     pip install torch>=2.2 --index-url https://download.pytorch.org/whl/cpu
+
+websockets>=12.0
+aiohttp>=3.9
+pandas>=2.1
+numpy>=1.26
+scikit-learn>=1.4
+xgboost>=2.0
+joblib>=1.3
+psutil>=5.9
+rich>=13.7
+requests>=2.31
+textual>=0.47
+# Web GUI (optional — only needed for web_app.py)
+fastapi>=0.110
+uvicorn>=0.27
+
+# ── Optional model libraries ──────────────────────────────────────────────────
+# Uncomment (or pip install) the libraries for models you want to enable.
+# All of these degrade gracefully — if the library is missing, the model is
+# simply skipped during training with a clear message.
+#
+lightgbm>=4.0       # LGBM_TREE   — fast gradient boosting
+catboost>=1.2       # CATBOOST_TREE — robust gradient boosting (no tuning needed)
+statsmodels>=0.14   # ARIMA_STATS — classical time-series model
+prophet>=1.1        # PROPHET_FB  — Meta time-series forecasting
