@@ -239,9 +239,12 @@ def get_archive_trade_history(model_key: str, filename: str) -> list:
     Looks for a .trades.json file alongside the model.
     """
     d = _archive_subdir(model_key)
-    # Remove extension and look for .trades.json
-    base = os.path.splitext(filename)[0]
-    path = os.path.join(d, base + ".trades.json")
+    # Remove extension and look for .trades.json (a bare file name inside the archive folder only)
+    base = os.path.splitext(os.path.basename(filename))[0]
+    root = os.path.realpath(d)
+    path = os.path.realpath(os.path.join(root, base + ".trades.json"))
+    if not path.startswith(root + os.sep):
+        return []
     if os.path.exists(path):
         try:
             import json
