@@ -36,5 +36,5 @@ uvicorn>=0.27
 #
 lightgbm>=4.7.0       # LGBM_TREE   — fast gradient boosting
 catboost>=1.2       # CATBOOST_TREE — robust gradient boosting (no tuning needed)
-statsmodels>=0.14   # ARIMA_STATS — classical time-series model
+statsmodels>=0.15.0   # ARIMA_STATS — classical time-series model
 prophet>=1.1        # PROPHET_FB  — Meta time-series forecasting
