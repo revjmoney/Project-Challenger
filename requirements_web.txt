@@ -5,5 +5,5 @@
 # Or install everything at once:
 #   pip install -r requirements.txt -r requirements_web.txt
 
-fastapi>=0.110
+fastapi>=0.165.0
 uvicorn>=0.27

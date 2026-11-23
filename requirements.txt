@@ -26,7 +26,7 @@ rich>=13.7
 requests>=2.31
 textual>=0.47
 # Web GUI (optional — only needed for web_app.py)
-fastapi>=0.110
+fastapi>=0.165.0
 uvicorn>=0.27
 
 # ── Optional model libraries ──────────────────────────────────────────────────
